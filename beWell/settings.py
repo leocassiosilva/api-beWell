@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'accounts',
     'django.contrib.admin',
     'rest_framework',
+    'podcasts',
+    'videos',
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUsuario"

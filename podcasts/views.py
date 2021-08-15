@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .models import Podcast
+from podcasts.serializer import PodcastSerializer
 
-# Create your views here.
+
+class TrabalhoViewSet(viewsets.ModelViewSet):
+    queryset = Podcast.objects.all()
+    serializer_class = PodcastSerializer
