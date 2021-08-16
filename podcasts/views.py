@@ -3,6 +3,6 @@ from .models import Podcast
 from podcasts.serializer import PodcastSerializer
 
 
-class TrabalhoViewSet(viewsets.ModelViewSet):
+class PodcastViewSet(viewsets.ModelViewSet):
     queryset = Podcast.objects.all()
     serializer_class = PodcastSerializer

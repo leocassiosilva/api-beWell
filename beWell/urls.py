@@ -17,7 +17,16 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 
+from accounts.views import UsuarioViewSet
+from podcasts.views import PodcastViewSet
+from videos.views import VideoViewSet
+
 router = routers.DefaultRouter()
+router.register(r'podcasts', PodcastViewSet)
+router.register(r'user', UsuarioViewSet)
+router.register(r'videos', VideoViewSet)
+
+
 
 urlpatterns = [
     path('', include(router.urls)),
