@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'videos',
 ]
 
-AUTH_USER_MODEL = "accounts.CustomUsuario"
+AUTH_USER_MODEL = 'accounts.CustomUsuario'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
