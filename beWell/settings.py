@@ -41,9 +41,16 @@ INSTALLED_APPS = [
     'rest_framework',
     'podcasts',
     'videos',
+    'rest_framework_swagger',
 ]
 
 AUTH_USER_MODEL = "accounts.CustomUsuario"
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAuthenticated',),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
