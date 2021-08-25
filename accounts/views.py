@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from rest_framework import permissions
-from rest_framework.generics import  ListAPIView, ListCreateAPIView
+from rest_framework.generics import  CreateAPIView, ListAPIView, ListCreateAPIView
 from rest_framework.permissions import IsAuthenticated
 
 from accounts.models import CustomUsuario
@@ -24,3 +24,7 @@ class UsuarioListView(ListAPIView):
         return CustomUsuario.objects.filter(username=self.request.user.username)
 
 # return CustomUsuario.objects.filter(usuario=self.request.user)
+
+class UsuarioCreateViewSet(CreateAPIView):
+    serializer_class = UsuarioSerializer
+    queryset = CustomUsuario.objects.all()
