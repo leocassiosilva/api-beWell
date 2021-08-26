@@ -1,4 +1,5 @@
 from django.urls import path
+from rest_framework import views
 from .views import (
    UsuarioListView, UsuarioCreateViewSet
 )
@@ -6,6 +7,6 @@ from .views import (
 
 urlpatterns = [
    path('meus-dados/', UsuarioListView.as_view(), name='meus-dados'),
-   path('create/', UsuarioCreateViewSet.as_view(), name='create'),
+   path('cadastro/', UsuarioCreateViewSet.as_view(), name='cadastro'),
 
 ]

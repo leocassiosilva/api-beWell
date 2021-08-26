@@ -84,9 +84,15 @@ WSGI_APPLICATION = 'beWell.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd6d82mj5dgj26h',
+        'USER': 'fgcdktyfiwpyuf',
+        'PASSWORD': '132f6ede4810ca38f94c9d97529b1ac6f7ae5e8f7361cfd1c676a705433312a5',
+        'HOST': 'ec2-34-197-105-186.compute-1.amazonaws.com',
+        'PORT': '5432'
+    }
 }
-
 
 
 #DATABASES = {
