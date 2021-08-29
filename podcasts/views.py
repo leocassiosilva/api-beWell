@@ -11,15 +11,11 @@ class PodcastViewSet(viewsets.ModelViewSet):
     serializer_class = PodcastSerializer
 
 
-#List view para todos os usuarios    
+#Lista os podcasts daquele usuarios    
 class PodcastListViewUser(ListAPIView):
-    permission_classes = (IsAuthenticated, )
-    #queryset = CustomUsuario.objects.all()
     serializer_class = PodcastSerializer
 
     def get_queryset(self):
-        user = self.request.user
-        print(user)
         return Podcast.objects.order_by('nome').filter(id_usuario=self.request.user)
 
 
