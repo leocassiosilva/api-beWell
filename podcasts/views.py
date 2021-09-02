@@ -7,6 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 
 
 class PodcastViewSet(viewsets.ModelViewSet):
+    permission_classes = (IsAuthenticated, )
     queryset = Podcast.objects.all()
     serializer_class = PodcastSerializer
 
