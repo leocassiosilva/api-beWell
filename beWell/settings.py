@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'podcasts',
     'videos',
+    'rest_framework_swagger'
 ]
 
 AUTH_USER_MODEL = 'accounts.CustomUsuario'
