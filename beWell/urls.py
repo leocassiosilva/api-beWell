@@ -25,6 +25,7 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 
+
 router = routers.DefaultRouter()
 router.register(r'podcasts', PodcastViewSet)
 router.register(r'user', UsuarioViewSet)
@@ -37,6 +38,8 @@ urlpatterns = [
     
     path('', include(router.urls)),
     path('', include('podcasts.urls')),
+    path('', include('videos.urls')),
+
     path('', include('accounts.urls')),
     path('admin/', admin.site.urls),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
